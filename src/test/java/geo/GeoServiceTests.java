@@ -25,10 +25,10 @@ public class GeoServiceTests {
     }
 
     public static Stream<Arguments> getReturnsExistingLocationTestParameters() {
-        return Stream.of(Arguments.of(
-                GeoServiceImpl.MOSCOW_IP, new Location("Moscow", Country.RUSSIA, "Lenina", 15),
-                GeoServiceImpl.NEW_YORK_IP, new Location("New York", Country.USA, " 10th Avenue", 32)
-        ));
+        return Stream.of(
+                Arguments.of(GeoServiceImpl.MOSCOW_IP, new Location("Moscow", Country.RUSSIA, "Lenina", 15)),
+                Arguments.of(GeoServiceImpl.NEW_YORK_IP, new Location("New York", Country.USA, " 10th Avenue", 32))
+        );
     }
 
     @Test
