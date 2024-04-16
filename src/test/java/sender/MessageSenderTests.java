@@ -29,9 +29,9 @@ public class MessageSenderTests {
     }
 
     @Test
-    public void senderSendsOnlyRussianTextWhenIPIsRussianTest() {
+    void senderSendsOnlyRussianTextWhenIPIsRussianTest() {
         String ruIpAddress = "172.123.12.19";
-        Map<String, String> headers = new HashMap<String, String>();
+        Map<String, String> headers = new HashMap<>();
         headers.put(MessageSenderImpl.IP_ADDRESS_HEADER, ruIpAddress);
 
         String actualLocale = messageSender.send(headers);
@@ -40,9 +40,9 @@ public class MessageSenderTests {
     }
 
     @Test
-    public void senderSendsOnlyEnglishTextWhenIPIsAmericanTest() {
+    void senderSendsOnlyEnglishTextWhenIPIsAmericanTest() {
         String usIpAddress = "96.128.10.21";
-        Map<String, String> headers = new HashMap<String, String>();
+        Map<String, String> headers = new HashMap<>();
         headers.put(MessageSenderImpl.IP_ADDRESS_HEADER, usIpAddress);
 
         String actualLocale = messageSender.send(headers);
